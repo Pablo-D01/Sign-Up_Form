@@ -7,6 +7,45 @@
     <title>Sign-Up Form</title>
 </head>
 <body>
+    <div class="container" >
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+              </video>
+        </div>
+        <div class="form-container">
+            <form action="#" method="post">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="class">Choose your class</label>
+                <select name="class">
+                    <option value="warrior">Warrior</option>
+                    <option value="ninja">Ninja</option>
+                    <option value="sura">Sura</option>
+                    <option value="shaman">Shaman</option>
+                    <option value="lycan">Lycan</option>
+                </select>
+
+                <label for="gender">Gender</label>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+
+                <label for="empire">Choose your Empire</label>
+                <select name="empire">
+                    <option value="warrior">Chunjo</option>
+                    <option value="ninja">Jinno</option>
+                    <option value="sura">Shinsoo</option>
+                </select>
+
+            </form>
+        </div>
+    </div>
 
 
     <script src="script.js"></script>
