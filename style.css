@@ -5,6 +5,7 @@ body {
     font-family: 'Roboto Serif', serif; 
     font-weight: bold;
     overflow: hidden;
+    color: #FAE18B;
 }
   
   .container {
@@ -27,19 +28,65 @@ body {
     top: 0;
     left: 0;
   }
-  
+
+  .logo{
+    z-index: 2;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    /* display: none; */
+  }
+  .logo img{
+    height: 5rem;
+  }
   .form-container {
+    font-size: 1.5rem;
     position: absolute;
     top: 0;
     right: 0;
     width: 40%; 
-    height: 100%; 
-    background-color: rgba(255, 255, 255, 0.8);
+    height: 100vh; 
+    background-color: #1716135f;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
     padding: 20px;
     box-sizing: border-box;
   }
 
+  .form-container form{
+    display: flex;
+    flex-direction: column; 
+    row-gap: 1rem;
+    align-items: center;
+    width: 45rem;
+    border: solid yellow;
+  }
 
+
+  .header{
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    margin-left: 1px;
+    display: block;
+    text-align: center;
+
+  }
+
+  .subheader{
+    font-size: 2rem;
+    letter-spacing: 0px;
+    margin-bottom: 2rem;
+  }
+
+
+.gender label[for="male"],.gender label[for="female"] {
+    font-weight: lighter;
+}
+  
   @media only screen and (max-width: 1050px) {
     .form-container {
         position: relative; 
@@ -59,6 +106,9 @@ body {
     }
 
     .form{
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: #171613;
+    }
+    .logo{
+        display: none;
     }
   }
