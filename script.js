@@ -36,16 +36,47 @@ function checkLenght(){
     }
 }
 
+function checkPasswords() {
+    let passwordValue = password.value;
+    let confirmPasswordValue = confirmPassword.value;
+
+    if(!confirmPasswordValue){
+        password.style.border = '1px solid green';
+    } 
+    else if (passwordValue != confirmPasswordValue) {
+        password.style.border = '3px solid red';
+        confirmPassword.style.border = '3px solid red';
+    } 
+    else {
+        password.style.border = '1px solid green';
+        confirmPassword.style.border = '1px solid green';
+    }
+}
+
+function finalPasswordCheck() {
+    let passwordValue = password.value;
+    let confirmPasswordValue = confirmPassword.value;
+    checkPasswords();
+    if (passwordValue != confirmPasswordValue) {
+        alert('Passwords do not match')
+        return true
+    }
+}
+
 // Listen if someone submits!
 form.addEventListener('submit', function (event) {
-    if (checkIfEmpty() || checkLenght()) {
+    if (checkIfEmpty() || checkLenght() || finalPasswordCheck()) {
         event.preventDefault();
     }
 });
 
 
 // listen when someone types
-firstName.addEventListener('input', function () {
+// password.addEventListener('input', function () {
+//     checkPasswords()
+// });
 
-});
+// confirmPassword.addEventListener('input', function () {
+//     checkPasswords()
+// });
 
