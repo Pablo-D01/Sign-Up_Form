@@ -114,6 +114,8 @@ body{
 
   select{
     color: #FAE18B;
+    font-weight: bold;
+    background-color: #7d24216d;
   }
   option{
     color: #171613;
@@ -129,6 +131,10 @@ body{
     font-weight: 100;
 }
 
+.submit :hover{
+  cursor: pointer ;
+  scale: 105%;
+}
 
 @media only screen and (max-height: 1900px) {
   .form-container {
@@ -142,7 +148,7 @@ body{
   }
 }
   
-  @media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1050px) {
 
     html {
       font-size: 100%;
@@ -171,6 +177,8 @@ body{
     .logo{
         display: none;
     }
+
+
 
   }
   @media only screen and (max-width: 930px) {
