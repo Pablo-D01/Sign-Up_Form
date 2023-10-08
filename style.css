@@ -67,6 +67,7 @@ body{
     align-items: center;
     width: auto;
     border: solid #980B05;
+    overflow: none;
   }
 
 
@@ -97,6 +98,13 @@ body{
 
 .gender label[for="male"],.gender label[for="female"] {
     font-weight: lighter;
+}
+
+
+@media only screen and (max-height: 1900px) {
+  .form-container {
+    overflow: auto;
+  }
 }
 
 @media only screen and (max-width: 1560px) {
