@@ -100,7 +100,6 @@ fields.forEach(field => {
 empireSelect.addEventListener('change', function() {
     const empireSelected = this.value;
     
-    // Tutaj możesz dodać dodatkową logikę w zależności od wybranej opcji
     if (empireSelected.trim() === 'Chunjo') {
         console.log('Wybrano:', empireSelected);
         empireSelect.style.color = 'yellow';
