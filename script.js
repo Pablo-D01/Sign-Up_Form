@@ -23,7 +23,6 @@ const fields = [
 window.addEventListener("DOMContentLoaded", event => {
     // music.volume = 0;
     music.volume = 0.2;
-    music.play();
   });
 
 function checkIfEmpty() {
@@ -92,6 +91,7 @@ confirmPassword.addEventListener('input', function () {
 
 fields.forEach(field => {
     field.element.addEventListener('input', function () {
+        music.play();
         playSound(keySound);
     });
 });
