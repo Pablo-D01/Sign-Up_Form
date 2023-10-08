@@ -9,6 +9,8 @@ const genderMale = document.getElementById('male');
 const genderFemale = document.getElementById('female');
 const empireSelect = document.getElementsByName('empire')[0];
 const submitButton = document.querySelector('.submit input');
+const music = document.getElementById('music');
+const keySound = document.getElementById('keySound');
 
 
 const fields = [
@@ -17,6 +19,11 @@ const fields = [
     { element: password, message: 'Please enter your password' }
 ];
 
+
+window.addEventListener("DOMContentLoaded", event => {
+    music.volume = 0.2;
+    music.play();
+  });
 
 function checkIfEmpty() {
     for (const field of fields) {
@@ -71,12 +78,21 @@ form.addEventListener('submit', function (event) {
 });
 
 
-// listen when someone types
-// password.addEventListener('input', function () {
-//     checkPasswords()
-// });
+function playSound(audioElement) {
+    audioElement.currentTime = 0; 
+    audioElement.play(); 
+    console.log('sound');
+}
 
-// confirmPassword.addEventListener('input', function () {
-//     checkPasswords()
-// });
+// listen when someone types
+confirmPassword.addEventListener('input', function () {
+    playSound(keySound)
+});
+
+fields.forEach(field => {
+    field.element.addEventListener('input', function () {
+        playSound(keySound);
+    });
+});
+
 
